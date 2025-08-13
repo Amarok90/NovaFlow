@@ -3,6 +3,7 @@ from fastapi.responses import RedirectResponse
 from dotenv import load_dotenv
 import os
 from .shopify_client import list_products
+from .sync_products import upsert_products
 
 load_dotenv()
 app = FastAPI(title="NovaFlow API")
@@ -23,3 +24,10 @@ def health():
 def sync_shopify_products(_: None = require_api_key):
     items = list_products(limit=50)
     return {"count": len(items)}
+
+@app.post("/sync/shopify/products/save")
+def sync_and_save(_: None = require_api_key):
+    count = upsert_products()
+    return {"saved": count}
+
+
