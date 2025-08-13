@@ -1,0 +1,32 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# --- Virtual Environments ---
+.venv/
+venv/
+env/
+
+# --- Environment Variables ---
+.env
+.env.*
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+
+# --- Database / Cache ---
+*.sqlite3
+*.db
+*.db-journal
+
+# --- Retool / Misc ---
+*.local
