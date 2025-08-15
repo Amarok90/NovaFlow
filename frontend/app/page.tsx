@@ -1,0 +1,1 @@
+export default function Home(){return <div><h1>NovaFlow PRO</h1><p>AI e-commerce портал</p></div>}

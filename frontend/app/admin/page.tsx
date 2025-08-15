@@ -1,0 +1,1 @@
+export default function Admin(){return <div><h2>Админка</h2><p>Управление пользователями/подписками — сделай в Retool.</p></div>}
