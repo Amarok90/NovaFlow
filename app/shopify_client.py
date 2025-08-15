@@ -4,7 +4,7 @@ import requests
 
 def _base_url():
     store = os.getenv("SHOPIFY_STORE", "").strip()
-    version = os.getenv("SHOPIFY_API_VERSION", "2024-10")
+    version = os.getenv("SHOPIFY_API_VERSION", "2025-07")
     if not store:
         raise RuntimeError("SHOPIFY_STORE is not set in .env")
     return f"https://{store}/admin/api/{version}"
